@@ -82,4 +82,4 @@ async def on_message(message):
    
 
 
-client.run('replace this with your token from secrets.sh')
+client.run(os.environ['DISCORD_TOKEN'])
