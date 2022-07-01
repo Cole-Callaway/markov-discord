@@ -78,8 +78,11 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
+    
+    # await message.channel.send(make_text(chains))
+    if message.content.startswith('$hello'):
+        await message.channel.send('hello!')
 
-   
-
+    
 
 client.run(os.environ['DISCORD_TOKEN'])
